@@ -1,4 +1,4 @@
-package T1;
+package T1.Practice;
 
 public class CollegeStudent extends Student {
 	private int testGrade;
