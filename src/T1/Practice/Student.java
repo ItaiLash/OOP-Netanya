@@ -21,7 +21,7 @@ public class Student {
     }
 
     public void show() {
-        System.out.println("Student ID:" + this.id);
+        System.out.println("T5.Practice2.Student ID:" + this.id);
         System.out.println("Work grades:");
         for (int i = 0; i < this.workGrades.length; i++)
             System.out.println(i + 1 + " : " + this.workGrades[i]);
