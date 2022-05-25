@@ -20,13 +20,17 @@ public class Student {
 		try {
 			courses[location++] = course;
 		} catch (RuntimeException e) {
-			Course[] arrNew = new Course[courses.length * 2];
-			for (int i = 0; i < courses.length; i++)
-				arrNew[i] = courses[i];
-			courses = arrNew;
-			courses[location++] = course;
+			this.courses = biggerArr();
+			this.courses[location++] = course;
 			e.printStackTrace();
 		}
+	}
+
+	private Course[] biggerArr(){
+		Course[] biggerArr = new Course[this.courses.length * 2];
+		for (int i = 0; i < this.courses.length; i++)
+			biggerArr[i] = this.courses[i];
+		return biggerArr;
 	}
 
 	public double calculateAverage() {
